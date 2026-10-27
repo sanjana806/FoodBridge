@@ -1,0 +1,395 @@
+.hero-section {
+  padding: 4.5rem 0 5rem 0;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 20%, rgba(216, 243, 220, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 90% 80%, rgba(243, 236, 225, 0.6) 0%, transparent 50%),
+              var(--bg-cream);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-badge {
+  margin-bottom: 1.25rem;
+}
+
+.hero-badge-icon {
+  color: var(--color-primary-600);
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary-900);
+  line-height: 1.15;
+}
+
+.highlight-text {
+  color: var(--color-primary-600);
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-text::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(82, 183, 136, 0.22);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta-donate {
+  padding: 0.95rem 2rem;
+  font-size: 1.05rem;
+}
+
+.hero-cta-find {
+  padding: 0.95rem 1.85rem;
+  font-size: 1.05rem;
+}
+
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-800);
+}
+
+.trust-icon {
+  color: var(--color-primary-500);
+}
+
+/* Right Column Visual Card */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.visual-card-backdrop {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  bottom: -5%;
+  background: linear-gradient(135deg, rgba(82, 183, 136, 0.2), rgba(221, 161, 94, 0.15));
+  border-radius: var(--radius-lg);
+  filter: blur(25px);
+  z-index: 1;
+}
+
+.main-rescue-card {
+  position: relative;
+  z-index: 2;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 440px;
+  animation: floatUp 0.8s ease-out;
+}
+
+.card-demo-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #B45309;
+  background-color: #FEF3C7;
+  border: 1px solid rgba(180, 83, 9, 0.25);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.9rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.donor-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.donor-avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: var(--bg-cream-soft);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  border: 1px solid rgba(45, 106, 79, 0.15);
+}
+
+.donor-name {
+  font-size: 0.975rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.donor-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.live-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border-radius: var(--radius-full);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #2E7D32;
+  border-radius: 50%;
+  animation: pulse 1.8s infinite;
+}
+
+.donation-details {
+  margin-bottom: 1.25rem;
+}
+
+.donation-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  margin-bottom: 0.35rem;
+}
+
+.donation-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  background-color: var(--bg-cream);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.detail-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary-800);
+}
+
+.matched-ngo-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, var(--color-primary-50), #EDF6EE);
+  border: 1px solid rgba(45, 106, 79, 0.2);
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+}
+
+.ngo-badge-icon {
+  color: var(--color-primary-600);
+  display: flex;
+  align-items: center;
+}
+
+.ngo-info {
+  flex: 1;
+}
+
+.ngo-status {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary-600);
+}
+
+.ngo-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+}
+
+.match-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Floating Metric Badges */
+.floating-metric-card {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 0.65rem 1rem;
+  box-shadow: var(--shadow-lg);
+  animation: softHover 4s ease-in-out infinite;
+}
+
+.metric-co2 {
+  top: -15px;
+  right: -15px;
+}
+
+.metric-meals {
+  bottom: -20px;
+  left: -20px;
+  animation-delay: 2s;
+}
+
+.metric-icon {
+  font-size: 1.4rem;
+}
+
+.metric-num {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-primary-800);
+  line-height: 1.1;
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(46, 125, 50, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes softHover {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .hero-title {
+    font-size: 2.6rem;
+  }
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-trust-bar {
+    justify-content: center;
+  }
+  .main-rescue-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-title {
+    font-size: 2.15rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-donate,
+  .hero-cta-find {
+    width: 100%;
+  }
+  .metric-co2 {
+    right: 5px;
+    top: -25px;
+  }
+  .metric-meals {
+    left: 5px;
+    bottom: -25px;
+  }
+}
